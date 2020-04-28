@@ -1,0 +1,54 @@
+.header {
+	background-color: #1f1c1c;
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__navigation {
+		&-hamburger {
+			padding: 0;
+			&-line {
+				background-color: #C4C4C4; 
+				&--first, &--third {
+					width: 25px;
+					height: 3px;
+				}
+				&--second {
+					width: 28px;
+					height: 3px;
+				}
+			}
+		}
+	}
+	&__phone {
+		&-link {
+			color: $mainGreenColor;
+			font-size: rem(27px);
+		}
+		&-number {
+			&-text {
+				display: none;
+			}
+		}
+	}
+}
+
+#mmenu {
+	--mm-color-background: #1f1c1c;
+}
+
+// .hamburger div {
+//     height: 3px;
+//     margin: 6px 0;
+//     background-color: #000;
+//     &:first-child {
+//         width: 28px;
+//     }
+//     &:nth-child(2) {
+//         width: 20px;
+//     }
+//     &:nth-child(3) {
+//         width: 25px;
+//     }
+// }
