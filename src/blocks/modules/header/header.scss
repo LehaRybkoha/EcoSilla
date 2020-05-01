@@ -1,13 +1,21 @@
 .header {
-	background-color: #1f1c1c;
+	@include lg(padding, 20px 0);
+	&-bg-wrapper {
+		background-image: url(/img/aboutBgLg.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		position: relative;
+	}
 	&-wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 	&__navigation {
+		@include lg(order, 2);
 		&-hamburger {
 			padding: 0;
+			@include lg(display, none);
 			&-line {
 				background-color: #C4C4C4; 
 				&--first, &--third {
@@ -25,30 +33,62 @@
 		&-link {
 			color: $mainGreenColor;
 			font-size: rem(27px);
-		}
-		&-number {
-			&-text {
-				display: none;
+			&-icon {
+				&--sm {
+					@include lg(display, none);
+				}
+				&--lg {
+					display: none;
+					@include lg(display, inline-block);
+				}
 			}
 		}
+		&-number {
+			@include lg(display, flex);
+			@include lg(order, 3);
+			@include lg(align-items, center);
+			&-text {
+				display: none;
+				font-size: rem(14px);
+				font-weight: bold;
+				color: #fff;
+				font-family: $fontRoboto;
+				@include lg(padding-left, 10px);
+				@include lg(display, block);
+			}
+		}
+	}
+	&__logo {
+		&-pic {
+			@include lg(height, 35px);
+		}
+	}
+}
+
+.nav {
+	&__link {
+		font-family: $fontRoboto;
+		font-size: rem(16px);
+		color: #BDBDBD;
+		@include md(font-size, rem(14px));
+		@include xl(font-size, rem(16px));
+	}
+	&__list {
+		@include lg(display, flex);
+	}
+	&__item {
+		@include lg(margin-right, rem(10px));
+		@include xl(margin-right, rem(30px));
+	}
+	&--sm {
+		@include lg(display, none);
+	}
+	&--md {
+		display: none;
+		@include lg(display, block);
 	}
 }
 
 #mmenu {
 	--mm-color-background: #1f1c1c;
 }
-
-// .hamburger div {
-//     height: 3px;
-//     margin: 6px 0;
-//     background-color: #000;
-//     &:first-child {
-//         width: 28px;
-//     }
-//     &:nth-child(2) {
-//         width: 20px;
-//     }
-//     &:nth-child(3) {
-//         width: 25px;
-//     }
-// }
