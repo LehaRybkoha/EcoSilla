@@ -1,103 +1,5 @@
-// .use {
-// 	background: linear-gradient(97.46deg, #16212A -2.62%, #3A5E73 102.18%);
-// 	&-wrapper {
-// 		padding: 0;
-// 	}
-// 	&__title {
-// 		padding: 48px 15px;
-// 		&-text {
-// 			font-family: $fontMont;
-// 			font-weight: bold;
-// 			font-size: rem(22px);
-// 			color: #fff;
-// 			text-align: center;
-// 			&--style {
-// 				color: #f37335;
-// 				font-style: italic;
-// 			}
-// 		}
-// 	}
-// 	&-content {
-// 		max-width: 450px;
-// 		margin: 0 auto;
-// 		&-about {
-// 			&__text {
-// 				padding-bottom: 40px;
-// 				&-title {
-// 					font-family: $fontMont;
-// 					font-size: rem(16px);
-// 					font-weight: bold;
-// 					color: #E0E0E0;
-// 					margin-bottom: 20px;
-// 					line-height: 30px;
-// 				}
-// 				&-desc {
-// 					font-family: $fontRoboto;
-// 					font-size: rem(15px);
-// 					color: #E0E0E0;
-// 					line-height: 28px;
-// 				}
-// 			}
-// 		}
-// 		&-about {
-// 			padding: 0 15px;
-// 		}
-// 		&-slider {
-// 			&__slide {
-// 				&-wrapper {
-// 					position: relative;
-// 					margin-bottom: -5px;
-// 					display: block;
-// 				}
-// 				&-title {
-// 					position: absolute;
-// 				    width: 100%;
-// 				    text-align: center;
-// 			        margin-top: 120px;
-// 			        background: linear-gradient(161.16deg, rgba(22, 34, 42, 0.3) -2.62%, rgba(58, 96, 115, 0.3) 102.18%);
-// 			        z-index: 1;
-// 					backdrop-filter: blur(4px);
-// 					&-text {
-// 						font-family: $fontRoboto;
-// 						font-size: rem(18px);
-// 						font-weight: bold;
-// 						color: #fff;
-// 						padding: 30px 0;
-// 					}
-// 				}
-// 				&-pic {
-// 					filter: grayscale(100%);
-// 					max-width: 320px;
-// 					height: 300px;
-// 					object-fit: cover;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-// .swiper-container {
-//     width: 320px;
-//     height: auto;
-//     &--lg {
-//     	display: none;
-//     	@include lg(display, block);
-//     	//@include lg(width, 640px);
-//     }
-//     &--sm {
-//     	@include lg(display, none);
-//     }
-// }
-
-// .swiper-slide {
-// 	@include lg(max-width, none);
-// 	@include lg(display, flex);
-// 	@include lg(flex-wrap, wrap);
-// }
-
-
-
 .use {
+	padding-bottom: 100px;
 	background: linear-gradient(97.46deg, #16212A -2.62%, #3A5E73 102.18%);
 	&-wrapper {
 		padding: 0;
@@ -186,28 +88,87 @@
 	}
 }
 
-.swiper-container {
-    height: 640px;
-    &--lg {
-    	display: none;
-    	@include lg(display, block);
-    	@include lg(width, 640px);
-    }
-    &--sm {
-    	@include lg(display, none);
-    }
+.swiper {
+	&-container {
+	    height: 640px;
+	    &--lg {
+	    	display: none;
+	    	@include lg(display, block);
+	    	@include lg(width, 640px);
+	    }
+	    &--sm {
+	    	@include lg(display, none);
+	    }
+	}
+	&-slide {
+		@include lg(max-width, none);
+		@include lg(display, flex);
+		@include lg(flex-wrap, wrap);
+	}
+	&-pagination--lg {
+	    width: 10px;
+	    height: 50px;
+	    position: absolute;
+        bottom: 46.5%;
+	    right: -30px;
+	}
+	&-pagination--sm {
+	    text-align: center;
+	}
+	&-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		background: #fff;
+		opacity: 1;
+		margin: 5px;
+		&-active {
+			background-color: $mainGreenColor;
+			outline: none;
+		}
+	} 
+	&-button {
+		&-prev--lg {
+		    top: -16px;
+		    left: 47.8%;
+			transform: rotate(90deg);
+			outline: none;
+			position: absolute;
+			z-index: 1;
+			cursor: pointer;
+		}
+		&-next--lg {
+		    right: 47.8%;
+			transform: rotate(90deg);
+			bottom: -16px;
+			top: unset;
+			outline: none;
+			position: absolute;
+			z-index: 1;
+			cursor: pointer;
+		}
+	}
+	&-circle {
+		background-color: $mainGreenColor;
+		border: 1px solid $mainGreenColor;
+		border-radius: 100%;
+		text-align: center;
+		&-left, &-right {
+			vertical-align: -webkit-baseline-middle;
+			padding: 8px;
+		}
+	}
 }
 
-.swiper-slide {
-	@include lg(max-width, none);
-	@include lg(display, flex);
-	@include lg(flex-wrap, wrap);
-}
-
-.swiper-pagination-s1 {
-	width: 10px;
-    height: 50px;
-    position: absolute;
-    margin-left: 650px;
-    bottom: 300px;
+.use-wrap-slider {
+	&--lg {
+		position: relative;
+		display: none;
+		max-width: 640px;
+		margin: 0 auto;
+		@include lg(display, block);
+		@include xl(margin, 0);
+	}
+	&--sm {
+		@include lg(display, none);
+	}
 }

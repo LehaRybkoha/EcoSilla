@@ -6,23 +6,23 @@ $(document).ready(function () {
     loop: true,
     slidesPerView: 1,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination--sm',
       clickable: true,
     },
   });
   var mySwiper2 = new Swiper ('.swiper-container--lg', {
+    pagination: {
+      el: '.swiper-pagination--lg',
+      type: 'bullets',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next--lg',
+      prevEl: '.swiper-button-prev--lg',
+    },
     speed: 400,
     loop: true,
     slidesPerView: 1,
     direction: 'vertical',
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
   });
 });
