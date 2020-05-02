@@ -1,0 +1,105 @@
+.products {
+	&-top {
+		&::after {
+			@include md(content, "");
+			width: 0;
+		    height: 0;
+		    border-left: 13px solid rgba(0,0,0,0);
+		    border-right: 13px solid rgba(0,0,0,0);
+		    border-top: 22px solid #f37335;
+		    margin-left: 17px;
+		    position: absolute;
+	        bottom: -22px;
+		    left: 48%;
+		}
+		background: linear-gradient(149.39deg, #FDC830 -29.92%, #F37335 109.31%);
+		padding: 50px 0;
+		font-family: $fontMont;
+		font-weight: bold;
+		font-size: rem(14px);
+		color: #333333;
+		position: relative;
+		@include sm(padding, 70px 0);
+		&__title {
+			max-width: 245px;
+			margin: 0 auto;
+			text-align: center;
+			@include lg(max-width, 100%);
+			@include lg(font-size, rem(40px));
+			&-pic {
+				@include lg(width, 170px);
+			}
+		}
+	}
+	&-middle {
+		@include xl(display, flex);
+		position: relative;
+		&::before {
+			@include xl(content, url(/img/sprites/intermediate-svg/imgFirst.svg));
+		    position: absolute;
+		    left: 49%;
+		    top: 100px;
+		}
+		&-photo {
+		    margin-top: -9%;
+		    @include xl(margin-top, -4%);
+		    @include xl(order, 2);
+		    @include lg(text-align, right);
+		    @include lg(margin-top, -5.5%);
+		    @include sm(margin-top, -5%);
+			&__pic {
+				transform: scale(-1, 1);
+				object-fit: cover;
+				width: 100%;
+				@include xl(width, 100%);
+				@include lg(transform, none);
+				@include lg(width, 60%);
+				@include sm(width, 57%);
+				max-width: 1011px;
+			}
+		}
+		&-content {
+			padding: 0 30px;
+			max-width: 650px;
+			margin: 50px auto 0 auto;
+			&__title {
+				font-family: $fontMont;
+				font-weight: bold;
+				color: #4F4F4F;
+				font-size: rem(18px);
+				margin-bottom: 20px;
+				@include lg(font-size, rem(30px));
+			}
+			&__desc {
+				font-family: $fontRoboto;
+				font-size: rem(15px);
+				color: #828282;
+				margin-bottom: 40px;
+				@include lg(font-size, rem(16px));
+			}
+			&__item {
+				position: relative;
+				margin-bottom: 25px;
+				@include sm(margin, 0 0 16px 20px);
+				&::before {
+					content: "";
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: #f58533;
+					border: 1px solid #f58533;
+					position: absolute;
+					left: -20px;
+					top: 1.5px;
+				}
+				&-text {
+					font-family: $fontRoboto;
+					font-size: rem(15px);
+					color: #828282;
+					@include lg(font-size, rem(16px));
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
