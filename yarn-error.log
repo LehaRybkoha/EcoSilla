@@ -1,5 +1,5 @@
 Arguments: 
-  /home/aleksei/.nvm/versions/node/v12.16.1/bin/node /usr/share/yarn/bin/yarn.js add dist gulpfile.babel.js gulp-tasks LICENSE node_modules package.json README.md src webpack.config.js yarn.lock
+  /home/aleksei/.nvm/versions/node/v12.16.1/bin/node /usr/share/yarn/bin/yarn.js add dist gulpfile.babel.js gulp-tasks LICENSE node_modules package.json README.md src webpack.config.js yarn-error.log yarn.lock
 
 PATH: 
   /home/aleksei/.nvm/versions/node/v12.16.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -97,7 +97,8 @@ npm manifest:
           "jquery": "^3.4.1",
           "mburger-css": "^1.3.3",
           "mmenu-js": "^8.5.5",
-          "smart-grid": "^2.1.2"
+          "smart-grid": "^2.1.2",
+          "swiper": "^5.3.8"
       }
   }
 
@@ -3883,6 +3884,13 @@ Lockfile:
     version "0.1.2"
     resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
     integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
+  
+  dom7@^2.1.3:
+    version "2.1.3"
+    resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.1.3.tgz#a736f9c3bfbc4ca039a81cd095f97d1d7f3de19c"
+    integrity sha512-QTxHHDox+M6ZFz1zHPAHZKI3JOHY5iY4i9BK2uctlggxKQwRhO3q3HHFq1BKsT25Bm/ySSj70K6Wk/G4bs9rMQ==
+    dependencies:
+      ssr-window "^1.0.1"
   
   domain-browser@^1.1.1:
     version "1.2.0"
@@ -10749,6 +10757,11 @@ Lockfile:
       safer-buffer "^2.0.2"
       tweetnacl "~0.14.0"
   
+  ssr-window@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
+    integrity sha512-dgFqB+f00LJTEgb6UXhx0h+SrG50LJvti2yMKMqAgzfUmUXZrLSv2fjULF7AWGwK25EXu8+smLR3jYsJQChPsg==
+  
   ssri@^6.0.1:
     version "6.0.1"
     resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
@@ -11347,6 +11360,14 @@ Lockfile:
       stable "^0.1.8"
       unquote "~1.1.1"
       util.promisify "~1.0.0"
+  
+  swiper@^5.3.8:
+    version "5.3.8"
+    resolved "https://registry.yarnpkg.com/swiper/-/swiper-5.3.8.tgz#25c555d73787d35aa56418b904cb3ed4423bade8"
+    integrity sha512-bCxrayTgzC2bZBRuFwAx7T4exWeHqMADBpcuTQ7PNCOIIzJRPqNh4ySIvW06LEEU3Q0KncaNre4hrn+jXcWivQ==
+    dependencies:
+      dom7 "^2.1.3"
+      ssr-window "^1.0.1"
   
   symbol-observable@1.0.1:
     version "1.0.1"

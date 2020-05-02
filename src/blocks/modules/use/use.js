@@ -5,6 +5,10 @@ $(document).ready(function () {
     speed: 400,
     loop: true,
     slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
   });
   var mySwiper2 = new Swiper ('.swiper-container--lg', {
     speed: 400,
