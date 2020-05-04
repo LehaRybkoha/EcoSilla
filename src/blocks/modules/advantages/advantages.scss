@@ -1,0 +1,363 @@
+.advantages {
+	margin: 115px 0 60px 0;
+	&-wrapper {
+		@include lg(position, relative);
+	}
+	&__title {
+		margin-bottom: 60px;
+		&-text {
+			font-family: $fontMont;
+			font-weight: bold;
+			font-size: rem(22px);
+			color: #333333;
+			text-align: center;
+			@include lg(font-size, rem(48px));
+		}
+	}
+	&__background {
+		text-align: center;
+		&-pic {
+		    width: 282px;
+		    height: 236px;
+		    @include lg(width, 430px);
+		    @include lg(height, 380px);
+		    @include xl(width, 746px);
+		    @include xl(height, 596px);
+		}
+	}
+	&__list {
+		max-width: 290px;
+		margin: 0 auto;
+		@include lg(margin, 0);
+		&-wrapper {
+			@include lg(position, absolute);
+			@include lg(top, 18%);
+			@include lg(display, flex);
+			@include lg(justify-content, space-between);
+			@include lg(width, 100%);
+		}
+	}
+	&__item {
+		display: flex;
+		margin-bottom: 40px;
+		@include lg(display, block);
+		position: relative;
+		&-weight {
+			@include lg(margin-bottom, 75px);
+			@include xl(margin-bottom, 85px);
+		}
+		&-text-wrapper {
+			margin-left: 20px;
+			@include lg(margin-left, 0);
+			&-insects {
+				@include lg(margin-left, 14px !important);
+				@include xl(margin-left, 28px !important);
+				@include lg(max-width, 210px);
+			}
+			&-plant {
+				@include lg(margin, -30px 0 0 84px !important);
+				@include xl(margin, -40px 0 0 123px !important);
+				@include lg(max-width, 210px);
+			}
+			&-time {
+				@include lg(margin, -60px 0 0 80px !important);
+				@include xl(margin, -88px 0 0 120px !important);
+			}
+			&-weight {
+				@include lg(margin, -20px 0 0 74px !important);
+				@include lg(max-width, 194px);
+			}
+			&-ice {
+				@include lg(margin, -55px 0 0 -33px !important);
+				@include xl(margin, -82px 0 0 -33px !important);
+			}
+		}
+		&-text {
+			font-family: $fontMont;
+			font-weight: 600;
+			font-size: rem(16px);
+			color: #4F4F4F;
+			margin-bottom: 20px;
+		}
+		&-desc {
+			font-family: $fontRoboto;
+			font-size: rem(15px);
+			color: #828282;
+		}
+		&-wrapper {
+			position: relative;
+			&--lg {
+				@include lg(margin-left, 60%);
+			}
+		}
+		&-gradient {
+			position: absolute;
+			font-family: $fontMont;
+			font-weight: 600;
+			font-size: rem(16px);
+			color: #333333;
+			background: linear-gradient(127.45deg, #FDC830 -29.92%, #F37335 109.31%);
+			box-shadow: 0px 0px 35px rgba(140, 140, 140, 0.1);
+			padding: 10px 20px 10px 10px;
+			border-radius: 100%;
+			@include xl(padding, 20px 30px 20px 20px);
+			&--xl {
+				@include lg(padding, 10px 10px 10px 20px);
+				@include xl(padding, 20px 20px 20px 30px);
+			}
+		}
+		&-pic {
+			position: relative;
+			z-index: 1;
+			&-ins {
+				width: 60px;
+				margin: -2px 0 0 10px;
+				@include xl(width, 92px);
+			}
+			&-plant {
+				width: 38px;
+				margin: -5px 0 0 25px;
+				@include xl(width, 57px);
+				@include xl(margin, -10px 0 0 40px);
+			}
+			&-time {
+				width: 36px;
+				margin: -12px 0 0 25px;
+				@include xl(width, 62px);
+				@include xl(margin, -20px 0 0 35px);
+			}
+			&-sun {
+				width: 39px;
+				margin: -1px 0 0 25px;
+				@include xl(width, 76px);
+				@include xl(margin, -8px -30px 0 0);
+				@include lg(margin, -1px -15px 0 0);
+				&--sm {
+					@include lg(display, none);
+				}
+				&--xl {
+					display: none;
+					@include lg(display, inline-block);
+				}
+			}
+			&-weight {
+				width: 49px;
+				margin: -7px 0 0 20px;
+				@include xl(width, 67px);
+				@include xl(margin, -13px -25px 0 0);
+				@include lg(margin, -12px -20px 0 0);
+				&--sm {
+					@include lg(display, none);
+				}
+				&--xl {
+					display: none;
+					@include lg(display, inline-block);
+				}
+			}
+			&-ice {
+				width: 45px;
+				margin-left: 20px;
+				@include xl(width, 89px);
+				@include xl(margin, -13px -43px 0 0);
+				@include lg(margin, -5px -20px 0 0);
+				&--sm {
+					@include lg(display, none);
+				}
+				&--xl {
+					display: none;
+					@include lg(display, inline-block);
+				}
+			}
+		}
+	}
+}
+
+.advantage__line {
+	&-insects {
+		position: relative;
+		&::before {
+			@include lg(content, "");
+			width: 378px;
+			height: 38px;
+			border-bottom: 1px solid #E6E6E6;
+			border-left: 1px solid #E6E6E6;
+			display: block;
+			margin: -13px 0 15px 16px;
+			position: relative;
+		    @include xl(top, -5px);
+		    @include xl(left, 4%);
+		}
+		&-circle {
+			&::before {
+				@include lg(content, "");
+				width: 11px;
+				height: 11px;
+				border: 1px solid $mainGreenColor;
+				display: inline-block;
+				position: absolute;
+				background-color: $mainGreenColor;
+				border-radius: 100%;
+				box-shadow: 0px 0px 10px #00AB28;
+			    right: -38%;
+			    bottom: -6px;
+			    @include xl(right, -43%);
+		    	@include xl(bottom, 0);
+			}
+		}
+	}
+	&-plant {
+		position: relative;
+		&::before {
+			@include lg(content, "");
+			width: 362px;
+			height: 1px;
+			border-bottom: 1px solid #E6E6E6;
+			display: block;
+		    position: absolute;
+		    top: -46px;
+		    left: 18%;
+		    @include xl(top, -60px);
+		}
+		&-circle {
+			&::before {
+				@include lg(content, "");
+				width: 11px;
+				height: 11px;
+				border: 1px solid $mainGreenColor;
+				display: inline-block;
+				position: absolute;
+				background-color: $mainGreenColor;
+				border-radius: 100%;
+				box-shadow: 0px 0px 10px #00AB28;
+			    right: -45%;
+			    bottom: 39px;
+		    	@include xl(bottom, 51px);
+			}
+		}
+	}
+	&-time {
+		position: relative;
+		&::before {
+			@include lg(content, "");
+			width: 456px;
+			height: 28px;
+			border-top: 1px solid #E6E6E6;
+			border-left: 1px solid #E6E6E6;
+			display: block;
+		    position: absolute;
+		    top: -28px;
+		    left: 7%;
+		    @include xl(left, 10%);
+		}
+		&-circle {
+			&::before {
+				@include lg(content, "");
+				width: 11px;
+				height: 11px;
+				border: 1px solid $mainGreenColor;
+				display: inline-block;
+				position: absolute;
+				background-color: $mainGreenColor;
+				border-radius: 100%;
+				box-shadow: 0px 0px 10px #00AB28;
+		        right: -67%;
+			    bottom: 21px;
+			    @include xl(right, -70%);
+			}
+		}
+	}
+	&-sun {
+		position: relative;
+		&::before {
+			@include lg(content, "");
+			width: 444px;
+			height: 38px;
+			border-bottom: 1px solid #E6E6E6;
+			border-right: 1px solid #E6E6E6;
+			display: block;
+		    position: relative;
+		    top: -6px;
+		    right: 78%;
+		    @include xl(width, 612px);
+		    @include xl(right, 126%);
+		    @include xl(top, -15px);
+		}
+		&-circle {
+			&::before {
+				@include lg(content, "");
+				width: 11px;
+				height: 11px;
+				border: 1px solid $mainGreenColor;
+				display: inline-block;
+				position: absolute;
+				background-color: $mainGreenColor;
+				border-radius: 100%;
+				box-shadow: 0px 0px 10px #00AB28;
+		        left: -80%;
+			    bottom: 0;
+			    @include xl(left, -128%);
+		    	@include xl(bottom, 9px);
+			}
+		}
+	}
+	&-weight {
+		position: relative;
+		&::before {
+			@include lg(content, "");
+			width: 362px;
+			height: 1px;
+			border-bottom: 1px solid #E6E6E6;
+			display: block;
+		    position: absolute;
+	        top: -31px;
+		    right: 35%;
+		}
+		&-circle {
+			&::before {
+				@include lg(content, "");
+				width: 11px;
+				height: 11px;
+				border: 1px solid $mainGreenColor;
+				display: inline-block;
+				position: absolute;
+				background-color: $mainGreenColor;
+				border-radius: 100%;
+				box-shadow: 0px 0px 10px #00AB28;
+		        left: -62%;
+			    bottom: 23px;
+			}
+		}
+	}
+	&-ice {
+		position: relative;
+		&::before {
+			@include lg(content, "");
+			width: 380px;
+			height: 28px;
+			border-top: 1px solid #E6E6E6;
+			border-right: 1px solid #E6E6E6;
+			display: block;
+		    position: absolute;
+	        top: -28px;
+		    right: 25%;
+		    @include xl(right, 13%);
+		    @include xl(width, 421px);
+		}
+		&-circle {
+			&::before {
+				@include lg(content, "");
+				width: 11px;
+				height: 11px;
+				border: 1px solid $mainGreenColor;
+				display: inline-block;
+				position: absolute;
+				background-color: $mainGreenColor;
+				border-radius: 100%;
+				box-shadow: 0px 0px 10px #00AB28;
+	            left: -59%;
+			    bottom: 21px;
+			    @include xl(left, -60%);
+			}
+		}
+	}
+}

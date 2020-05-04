@@ -1,4 +1,10 @@
-@mixin align-center {
-    display: flex;
-    align-items: center;
+@mixin btnStyles {
+    font-family: $fontRoboto;
+	font-weight: bold;
+	font-size: rem(16px);
+	text-transform: uppercase;
+	color: #731F0A;
+	background: linear-gradient(180deg, #FFAB00 0%, rgba(255, 201, 162, 0.9) 57.02%, rgba(255, 171, 0, 0) 98.96%), #FFAB00;
+	box-shadow: 0px 4px 1px #F99132;
+	border-radius: 100px;
 }

@@ -1,0 +1,174 @@
+.use {
+	padding-bottom: 100px;
+	background: linear-gradient(97.46deg, #16212A -2.62%, #3A5E73 102.18%);
+	&-wrapper {
+		padding: 0;
+	}
+	&__title {
+		padding: 48px 15px;
+		@include lg(padding, 48px 0);
+		&-text {
+			font-family: $fontMont;
+			font-weight: bold;
+			font-size: rem(22px);
+			color: #fff;
+			text-align: center;
+			@include lg(font-size, rem(48px));
+			&--style {
+				color: #f37335;
+				font-style: italic;
+			}
+		}
+	}
+	&-content {
+		@include xl(display, flex);
+		@include xl(align-items, center);
+		&-about {
+			max-width: 450px;
+			margin: 0 auto;
+			@include lg(max-width, 645px);
+			@include xl(max-width, 455px);
+			&__text {
+				padding-bottom: 40px;
+				&-title {
+					font-family: $fontMont;
+					font-size: rem(16px);
+					font-weight: bold;
+					color: #E0E0E0;
+					margin-bottom: 20px;
+					line-height: 30px;
+					@include lg(font-size, rem(30px));
+				}
+				&-desc {
+					font-family: $fontRoboto;
+					font-size: rem(15px);
+					color: #E0E0E0;
+					line-height: 28px;
+					@include lg(font-size, rem(16px));
+				}
+			}
+		}
+		&-about {
+			padding: 0 15px;
+			@include xl(order, 2);
+		}
+		&-slider {
+			&__slide {
+				&-wrapper {
+					position: relative;
+					max-width: 320px;
+				    margin: 0 auto -5px auto;
+				}
+				&-title {
+					position: absolute;
+				    width: 100%;
+				    text-align: center;
+			        margin-top: 120px;
+			        background: linear-gradient(161.16deg, rgba(22, 34, 42, 0.3) -2.62%, rgba(58, 96, 115, 0.3) 102.18%);
+			        z-index: 1;
+					backdrop-filter: blur(4px);
+					&-text {
+						font-family: $fontRoboto;
+						font-size: rem(18px);
+						font-weight: bold;
+						color: #fff;
+						padding: 30px 0;
+						@include xl(font-size, rem(20px));
+					}
+				}
+				&-pic {
+					filter: grayscale(100%);
+					max-width: 320px;
+					height: 300px;
+					object-fit: cover;
+					@include lg(height, 320px);
+				}
+			}
+		}
+	}
+}
+
+.swiper {
+	&-container {
+	    height: 640px;
+	    &--lg {
+	    	display: none;
+	    	@include lg(display, block);
+	    	@include lg(width, 640px);
+	    }
+	    &--sm {
+	    	@include lg(display, none);
+	    }
+	}
+	&-slide {
+		@include lg(max-width, none);
+		@include lg(display, flex);
+		@include lg(flex-wrap, wrap);
+	}
+	&-pagination--lg {
+	    width: 10px;
+	    height: 50px;
+	    position: absolute;
+        bottom: 46.5%;
+	    right: -30px;
+	}
+	&-pagination--sm {
+	    text-align: center;
+	}
+	&-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		background: #fff;
+		opacity: 1;
+		margin: 5px;
+		&-active {
+			background-color: $mainGreenColor;
+			outline: none;
+		}
+	} 
+	&-button {
+		&-prev--lg {
+		    top: -16px;
+		    left: 47.8%;
+			transform: rotate(90deg);
+			outline: none;
+			position: absolute;
+			z-index: 1;
+			cursor: pointer;
+		}
+		&-next--lg {
+		    right: 47.8%;
+			transform: rotate(90deg);
+			bottom: -16px;
+			top: unset;
+			outline: none;
+			position: absolute;
+			z-index: 1;
+			cursor: pointer;
+		}
+	}
+	&-circle {
+		background-color: $mainGreenColor;
+		border: 1px solid $mainGreenColor;
+		border-radius: 100%;
+		text-align: center;
+		&-left, &-right {
+			vertical-align: -webkit-baseline-middle;
+			padding: 8px;
+		}
+	}
+}
+
+.use-wrap-slider {
+	&--lg {
+		position: relative;
+		display: none;
+		max-width: 640px;
+		margin: 0 auto;
+		@include lg(display, block);
+		@include xl(margin, 0);
+	}
+	&--sm {
+		@include lg(display, none);
+	}
+}
