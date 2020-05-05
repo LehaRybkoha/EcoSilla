@@ -54,6 +54,9 @@
 		}
 		&-slider {
 			&__slide {
+				@include lg(max-width, none);
+				@include lg(display, flex);
+				@include lg(flex-wrap, wrap);
 				&-wrapper {
 					position: relative;
 					max-width: 320px;
@@ -90,20 +93,16 @@
 
 .swiper {
 	&-container {
-	    height: 640px;
 	    &--lg {
+		    height: 640px;
 	    	display: none;
 	    	@include lg(display, block);
 	    	@include lg(width, 640px);
 	    }
 	    &--sm {
+	    	height: 640px;
 	    	@include lg(display, none);
 	    }
-	}
-	&-slide {
-		@include lg(max-width, none);
-		@include lg(display, flex);
-		@include lg(flex-wrap, wrap);
 	}
 	&-pagination--lg {
 	    width: 10px;

@@ -1,0 +1,147 @@
+.fence {
+	@include xl(background, linear-gradient(143.48deg, #16212A -2.62%, #3A6073 102.18%));
+	&-photo {
+		margin-bottom: 50px;
+		@include xl(margin-bottom, 0);
+		&__pic {
+			width: 100%;
+			max-width: 680px;
+			@include xl(width, unset);
+			@include xl(max-width, 600px);
+			@media screen and (min-width: 1500px) {
+				max-width: 875px;
+				margin-top: -100px;
+			}
+		}
+	}
+	&-wrapper {
+		@include xl(display, flex);
+		@include xl(justify-content, space-around);
+		margin: 0 auto;
+		align-items: center;
+		max-width: 1920px;
+	}
+	&-about {
+		max-width: 580px;
+		margin: 0 auto;
+		@include lg(margin, 50px auto 0 auto);
+		&__slide {
+			text-align: center;
+			@include xl(text-align, left);
+			&-img {
+				max-width: 550px;
+			    width: 100%;
+			    height: 200px;
+			    border-radius: 10px;
+			}
+			&-desc {
+				font-family: $fontRoboto;
+				font-weight: 300;
+				font-size: rem(15px);
+				color: #828282;
+				text-align: center;
+				margin: 20px 0;
+				@include xl(max-width, 550px);
+			}
+		}
+		&__slider {
+			&-wrapper {
+				position: relative;
+			}
+			&-pagination {
+				bottom: 30% !important;
+				@include xl(width, 550px !important);
+			}
+			&-prev {
+				display: none;
+				left: -16px;
+				top: 33%;
+				outline: none;
+				position: absolute;
+				z-index: 1;
+				cursor: pointer;
+				@include xl(display, block);
+			}
+			&-next {
+				display: none;
+				right: 10px;
+				top: 34%;
+				outline: none;
+				position: absolute;
+				z-index: 1;
+				cursor: pointer;
+				@include xl(display, block);
+			}
+		}
+		&__title {
+			margin-bottom: 35px;
+			padding: 0 15px;
+			max-width: 550px;
+		    margin: 0 auto 35px auto;
+		    @include xl(margin, 0 0 35px 0);
+			&-text {
+				font-family: $fontMont;
+				font-weight: 600;
+				font-size: rem(18px);
+				color: #4F4F4F;
+				margin-bottom: 15px;
+				@include xl(font-size, rem(30px));
+				@include xl(color, $mainGreenColor);
+			}
+			&-desc {
+				font-family: $fontRoboto;
+				font-size: rem(15px);
+				line-height: 28px;
+				color: #828282;
+				@include xl(font-size, rem(16px));
+				@include xl(color, #E0E0E0);
+			}
+		}
+		&__list {
+			padding: 0 15px;
+			max-width: 550px;
+			margin: 0 auto;
+			@include xl(margin, 0);
+		}
+		&__item {
+			position: relative;
+			margin-bottom: 30px;
+			margin-left: 16px;
+			&::before {
+				content: "";
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: #f58533;
+				border: 1px solid #f58533;
+				position: absolute;
+				left: -20px;
+				top: 1.5px;
+			}
+			&-title {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(15px);
+				color: #828282;
+				@include xl(color, #E0E0E0);
+				@include xl(font-size, rem(16px));
+			}
+			&-desc {
+				font-family: $fontRoboto;
+				font-style: italic;
+				font-size: rem(15px);
+				color: #828282;
+				@include xl(font-size, rem(16px));
+				@include xl(color, #E0E0E0);
+				@include xl(font-style, normal);
+				&--sm {
+					@include xl(display, none);
+				}
+				&--lg {
+					display: none;
+					@include xl(display, inline-block);
+				}
+			}
+		}
+	}
+} 

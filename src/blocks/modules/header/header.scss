@@ -5,6 +5,7 @@
 		background-position: top;
 		background-repeat: no-repeat;
 		position: relative;
+		@include xl(background-color, #000);
 	}
 	&-wrapper {
 		display: flex;

@@ -1,5 +1,12 @@
 .products {
 	&-top {
+		background: linear-gradient(149.39deg, #FDC830 -29.92%, #F37335 109.31%);
+		padding: 50px 0;
+		font-family: $fontMont;
+		font-weight: bold;
+		font-size: rem(14px);
+		color: #333333;
+		position: relative;
 		&::after {
 			@include md(content, "");
 			width: 0;
@@ -12,13 +19,6 @@
 	        bottom: -22px;
 		    left: 48%;
 		}
-		background: linear-gradient(149.39deg, #FDC830 -29.92%, #F37335 109.31%);
-		padding: 50px 0;
-		font-family: $fontMont;
-		font-weight: bold;
-		font-size: rem(14px);
-		color: #333333;
-		position: relative;
 		@include sm(padding, 70px 0);
 		&__title {
 			max-width: 245px;
@@ -33,6 +33,7 @@
 	}
 	&-middle {
 		@include xl(display, flex);
+		@include xl(align-items, center);
 		position: relative;
 		&::before {
 			@include xl(content, url(/img/sprites/intermediate-svg/imgFirst.svg));
@@ -61,7 +62,8 @@
 		&-content {
 			padding: 0 30px;
 			max-width: 650px;
-			margin: 50px auto 0 auto;
+			margin: 50px auto;
+			@include lg(margin, 0 auto 50px auto);
 			&__title {
 				font-family: $fontMont;
 				font-weight: bold;

@@ -1,0 +1,88 @@
+.facade {
+	position: relative;
+	&::before {
+		@include xl(content, url(/img/sprites/intermediate-svg/imgThird.svg));
+	    position: absolute;
+	    left: 48.5%;
+	    top: 100px;
+	}
+	&::after {
+		@include md(content, "");
+		width: 0;
+	    height: 0;
+	    border-left: 13px solid rgba(0,0,0,0);
+	    border-right: 13px solid rgba(0,0,0,0);
+	    border-top: 22px solid #fff;
+	    margin-left: 17px;
+	    position: absolute;
+        bottom: -22px;
+	    left: 48%;
+	}
+	&-wrapper {
+		max-width: 1920px;
+		margin: 0 auto;
+		@include xl(display, flex);
+		@include xl(align-items, center);
+	}
+	&-picture {
+		margin-top: 65px;
+		display: flex;
+		justify-content: flex-end;
+		@include xl(order, 2);
+		&__pic {
+			width: 100%;
+			max-width: 900px;
+			@include xl(margin-top, -120px);
+		}
+	}
+	&-about {
+		max-width: 850px;
+		margin: 0 auto;
+		@include xl(max-width, 521px);
+		&__title {
+			font-family: $fontMont;
+			font-weight: 600;
+			font-size: rem(18px);
+			color: #4F4F4F;
+			padding-left: 15px;
+			margin-bottom: 14px;
+			@include xl(font-size, rem(30px));
+			@include xl(margin-bottom, 37px);
+		}
+		&__desc {
+			font-family: $fontRoboto;
+			font-size: rem(15px);
+			color: #828282;
+			margin-bottom: 30px;
+			line-height: 28px;
+			padding: 0 15px;
+			@include xl(font-size, rem(16px));
+		}
+		&__list {
+			display: none;
+			margin-left: 42px;
+			@include xl(display, block);
+		}
+		&__item {
+			position: relative;
+			margin-bottom: 20px;
+			&::before {
+				content: "";
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: #f58533;
+				border: 1px solid #f58533;
+				position: absolute;
+				left: -30px;
+				top: 1.5px;
+			}
+			&-title {
+				font-family: $fontMont;
+				font-weight: 600;
+				font-size: rem(16px);
+				color: #828282;
+			}
+		}
+	}
+} 
