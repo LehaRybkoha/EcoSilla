@@ -4,4 +4,6 @@ import "%modules%/advantages/advantages";
 import "%modules%/use/use";
 import "%modules%/products/products";
 import "%modules%/serie/serie";
+import "%modules%/facade/facade";
+import "%modules%/fence/fence";
 import "%modules%/footer/footer"

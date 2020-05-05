@@ -1,0 +1,56 @@
+.fence {
+	&-photo {
+		margin-bottom: 50px;
+		&__pic {
+			width: 100%;
+			max-width: 875px;
+		}
+	}
+	&-about {
+		padding: 0 15px;
+		&__title {
+			margin-bottom: 35px;
+			&-text {
+				font-family: $fontMont;
+				font-weight: 600;
+				font-size: rem(18px);
+				color: #4F4F4F;
+				margin-bottom: 15px;
+			}
+			&-desc {
+				font-family: $fontRoboto;
+				font-size: rem(15px);
+				line-height: 28px;
+				color: #828282;
+			}
+		}
+		&__item {
+			position: relative;
+			margin-bottom: 30px;
+			margin-left: 16px;
+			&::before {
+				content: "";
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: #f58533;
+				border: 1px solid #f58533;
+				position: absolute;
+				left: -20px;
+				top: 1.5px;
+			}
+			&-title {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(15px);
+				color: #828282;
+			}
+			&-desc {
+				font-family: $fontRoboto;
+				font-style: italic;
+				font-size: rem(15px);
+			color: #828282;
+			}
+		}
+	}
+}
