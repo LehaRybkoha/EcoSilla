@@ -1,0 +1,134 @@
+.wares {
+	margin-bottom: 50px;
+	&__title {
+		margin: 110px 0 60px 0;
+		text-align: center;
+		&-text {
+			font-family: $fontMont;
+			font-weight: bold;
+			font-size: rem(22px);
+			color: #333333;
+		}
+	}
+	&-content {
+		position: relative;
+		&__buttons {
+			&-wrapper {
+			    margin-bottom: 25px;
+			    text-align: center;
+			}
+			&-radio {
+				position: absolute;
+				left: -9999px;
+				&[type=radio]:checked + label.wares-content__buttons-label {
+					background-color: $mainGreenColor;
+					color: #fff
+				}
+			}
+			&-label {
+				display: inline-block;
+				font-family: $fontRoboto;
+				font-weight: bold;
+				font-size: rem(15px);
+				color: #4F4F4F;
+				background-color: #fff;
+				padding: 13px 0;
+				box-shadow: 0px 0px 30px rgba(129, 138, 148, 0.25);
+				border-radius: 10px;
+				width: 205px;
+				text-align: center;
+				cursor: pointer;
+				&:hover {
+					background-color: $mainGreenColor;
+					color: #fff
+				}
+			}
+		}
+		&__slider {
+			&-pagination {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		&__slider-pagination .swiper-pagination-bullet {
+			background: #E0E0E0;
+		}
+		&__slider-pagination .swiper-pagination-bullet-active{
+			background: $mainGreenColor;
+		}
+		&__slide {
+			&-picture {
+				position: relative;
+				&-prev, &-next {
+					position: absolute;
+					z-index: 10;
+					top: 15%;
+				}
+				&-prev {
+					left: -18px;
+				}
+				&-next {
+					right: -18px;
+				}
+			}
+			&-wrapper {
+				max-width: 205px;
+				box-shadow: 0px 4px 35px rgba(140, 140, 140, 0.3);
+				border-radius: 10px;
+				margin: 0 auto;
+				position: relative;
+			}
+			&-main {
+				padding: 25px 20px 40px 20px;
+				background-color: #fff;
+				margin-bottom: 28px;
+			    border-radius: 10px;
+				&-title {
+					font-family: $fontRoboto;
+					font-weight: 500;
+					font-size: rem(15px);
+					color: #828282;
+					margin-bottom: 6px;
+				}
+				&-desc {
+					font-family: $fontRoboto;
+					font-size: rem(14px);
+					color: rgba(51, 51, 51, 0.5);
+					margin-bottom: 18px;
+				}
+				&-logo {
+					margin-bottom: 8px;
+					&-desc {
+						font-family: $fontRoboto;
+						font-size: rem(14px);
+						color: rgba(51, 51, 51, 0.5);
+						margin-left: 18px;
+					}
+				}
+				&-price {
+					font-family: $fontRoboto;
+					font-size: rem(20px);
+					color: #333333;
+					margin-bottom: 8px;
+				}
+				&-recommend {
+					font-family: $fontRoboto;
+					font-weight: 300;
+					font-size: rem(10px);
+					color: #828282;
+					margin-bottom: 30px;
+				}
+				&-button {
+					font-family: $fontRoboto;
+					font-weight: bold;
+					font-size: rem(14px);
+					color: #731F0A;
+					background: linear-gradient(160.81deg, #FDC830 -29.92%, #F37335 109.31%);
+					border-radius: 100px;
+					height: 40px;
+					padding: 0 20px;
+				}
+			}
+		}
+	}
+}
