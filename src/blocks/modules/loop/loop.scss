@@ -1,4 +1,5 @@
 .loop {
+	margin-bottom: 164px;
 	&__title {
 		margin: 50px 0;
 		text-align: center;
@@ -7,20 +8,152 @@
 			font-weight: bold;
 			font-size: rem(22px);
 			color: #333333;
+			@include xl(font-size, rem(40px));
 		}
 	}
 	&-content {
+		position: relative;
+		&__list {
+			@include xl(display, flex);
+			@include xl(width, 967px);
+			@include xl(height, 400px);
+			@include xl(margin, 125px auto auto);
+			@include xl(position, relative);
+			@include xl(border-radius, 50%/100% 100% 0 0);
+			@include xl(border, 1px solid rgba(51,51,51,.25));
+			@include xl(border-bottom, rgba(0,0,0,0));
+		}
 		&__item {
 			text-align: center;
 			margin-bottom: 50px;
+			@include xl(position, absolute);
 			&-text {
 				font-family: $fontMont;
 				font-weight: 600;
 				font-size: rem(16px);
 				color: #4F4F4F;
+				@include xl(font-size, rem(20px));
+				@include xl(color, #828282);
+				@include xl(max-width, 326px);
 			}
 			&-pic {
 				margin-bottom: 25px;
+			}
+			&--one {
+				@include xl(margin-top, 32.4%);
+				@include xl(right, 96.5%);
+			}
+			&--two {
+				@include xl(margin-top, 8%);
+				@include xl(right, 88%);
+			}
+			&--three {
+				@include xl(bottom, 63%);
+				@include xl(right, 50.5%);
+			}
+			&--four {
+				@include xl(bottom, 63%);
+				@include xl(right, 16.6%);
+			}
+			&--five {
+				@include xl(margin-top, 8%);
+				@include xl(left, 87%);
+			}
+			&--six {
+				@include xl(top, 78.3%);
+				@include xl(left, 98%);
+			}
+		}
+		&__bottom {
+			text-align: center;
+			display: flex;
+			margin: 0 auto;
+			max-width: 352px;
+    		@include xl(position, absolute);
+    		@include xl(bottom, -34.5%);
+    		@include xl(left, 38%);
+    		@include xl(max-width, 426px);
+			&-popup {
+				background-color: #f9f9f9;
+				border-radius: 10px;
+				padding: 15px;
+				width: 155px;
+				top: 0;
+				margin-left: -50px;
+				max-height: 57px;
+				margin-top: 35px;
+				@include xl(width, 179px);
+				@include xl(margin-left, -73px);
+				@include xl(margin-top, 100px);
+				&-title {
+					font-family: $fontRoboto;
+					font-weight: 500;
+					font-size: rem(15px);
+					color: #FFAB00;
+					text-decoration-line: underline;
+					@include xl(font-size, rem(16px));
+				}
+				&-desc {
+					font-family: $fontRoboto;
+					font-size: rem(14px);
+					color: #828282;
+				}
+			}
+			&-pic {
+				max-width: 178px;
+				@include xl(max-width, none);
+			}
+		}
+		&-count {
+			&__list {
+				position: relative;
+				width: 753px;
+				height: 335px;
+			    margin: -262px auto auto;
+				display: none;
+				border: 1px solid rgba(51,51,51,.1);
+			    border-radius: 50%/100% 100% 0 0;
+			    border-bottom: rgba(0,0,0,0);
+				@include xl(display, block);
+			}
+			&__item {
+				position: absolute;
+				&--one {
+					padding-top: 2%;
+				    margin-top: 38%;
+				    right: 97.3%;
+				}
+				&--two {
+					margin-top: 13%;
+				    right: 86%;
+				}
+				&--three {
+					bottom: 85.5%;
+				    right: 63%;
+				}
+				&--four {
+					bottom: 86.7%;
+				    right: 30.3%;
+				}
+				&--five {
+					bottom: 49.3%;
+				    right: 7.6%;
+				}
+				&--six {
+				    top: 90.3%;
+				    left: 95.8%;
+				}
+				&-text {
+					font-family: $fontRoboto;
+					font-weight: 500;
+					font-size: rem(20px);
+					color: #FFAB00;
+					background-color: #fff;
+					box-shadow: 0px 0px 35px rgba(140, 140, 140, 0.15);
+					border-radius: 100%;
+					padding: 15px 20px;
+					display: inline-block;	
+				}
 			}
 		}
 	}

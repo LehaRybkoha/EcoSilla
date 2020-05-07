@@ -1,0 +1,146 @@
+.works {
+    background: linear-gradient(#fdc830,#f37335) no-repeat 0/50%,linear-gradient(#16222a,#3a6073) 100%/50%;
+	&__title {
+		text-align: center;
+		padding: 55px 0;
+		&-text {
+			font-family: $fontMont;
+			font-weight: bold;
+			font-size: rem(22px);
+			@include md(font-size, rem(40px));
+			&--ours {
+				color: #333;
+			}
+			&--works {
+				color: #fff;
+				margin-right: -22px;
+				@include md(margin-right, -15px);
+				@include lg(margin-right, -24px);
+			}
+			&--sm {
+				@include md(display, none);
+			}
+			&--md {
+				display: none;
+				@include md(display, block);
+			}
+		}
+	}
+	&-content {
+		&--sm {
+			@include md(display, none)
+		}
+		&--md {
+			display: none;
+			@include md(display, block)
+		}
+		&__slider {
+			&-pagination {
+				bottom: 60px !important;
+			}
+		}
+		&__slide {
+			&-wrapper {
+				position: relative;
+				max-width: 205px;
+				margin: 0 auto;
+				margin-bottom: 100px;
+				z-index: 4;
+				&:hover {
+					transition: all .7s;
+					z-index: 5;
+					-webkit-transform: scale(1.1);
+				}
+			}
+			&-pic {
+				max-width: 205px;
+				border-radius: 10px;
+				filter: grayscale(100%);
+			}
+			&-text {
+				font-family: $fontMont;
+				font-weight: 600;
+				color: #fff;
+				font-size: rem(18px);
+				position: absolute;
+				top: 42%;
+				width: 100%;
+				text-align: center;
+			}
+			&-button {
+				font-family: $fontRoboto;
+				font-weight: bold;
+				color: #731F0A;
+				background: linear-gradient(160.81deg, #FDC830 -29.92%, #F37335 109.31%);
+				height: 40px;
+				padding: 0 38px;
+				border-radius: 100px;
+				cursor: pointer;
+				&-wrapper {
+					position: absolute;
+					bottom: 20px;
+				    width: 100%;
+				    text-align: center;
+				}
+			}
+		}
+		&__list {
+			display: flex;
+			justify-content: center;
+		}
+		&__item {
+			&-wrapper {
+				position: relative;
+				max-width: max-content;
+				margin-bottom: 100px;
+				z-index: 4;
+				&:hover {
+					transition: all .7s;
+					z-index: 5;
+					-webkit-transform: scale(1.1);
+					.works-content__slide-button-wrapper {
+						opacity: 1;
+					}
+				}
+			}
+			&-pic {
+				max-width: 235px;
+				border-radius: 10px;
+				filter: grayscale(100%);
+				@include lg(max-width, 340px);
+				@media screen and (min-width: 1500px) {
+					max-width: none;
+				}
+			}
+			&-text {
+				font-family: $fontMont;
+				font-weight: 600;
+				color: #fff;
+				font-size: rem(18px);
+				position: absolute;
+				top: 42%;
+				width: 100%;
+				text-align: center;
+				@include lg(font-size, rem(30px));
+			}
+			&-button {
+				font-family: $fontRoboto;
+				font-weight: bold;
+				color: #731F0A;
+				background: linear-gradient(160.81deg, #FDC830 -29.92%, #F37335 109.31%);
+				height: 40px;
+				padding: 0 38px;
+				border-radius: 100px;
+				cursor: pointer;
+				&-wrapper {
+					position: absolute;
+					bottom: 20px;
+				    width: 100%;
+				    text-align: center;
+					@include lg(bottom, 40%);
+					@include lg(display, none);
+				}
+			}
+		}
+	}
+}
