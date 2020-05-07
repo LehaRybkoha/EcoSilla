@@ -7,4 +7,6 @@ import "%modules%/serie/serie";
 import "%modules%/facade/facade";
 import "%modules%/fence/fence";
 import "%modules%/wares/wares";
+import "%modules%/choice/choice";
+import "%modules%/loop/loop";
 import "%modules%/footer/footer"

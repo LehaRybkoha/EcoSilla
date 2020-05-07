@@ -12,7 +12,24 @@
 	}
 	&-content {
 		position: relative;
+		&-products {
+			&--lg {
+				display: none;
+				@include xl(display, block);
+			}
+			&--sm {
+				@include xl(display, none);
+			}
+			&__list {
+				@include xl(display, flex);
+			}
+			&__item {
+				@include xl(max-width, 300px);
+			}
+		}
 		&__buttons {
+			@include xl(display, flex);
+			@include xl(justify-content, center);
 			&-wrapper {
 			    margin-bottom: 25px;
 			    text-align: center;
@@ -48,6 +65,7 @@
 			&-pagination {
 				width: 100%;
 				text-align: center;
+				bottom: 0 !important;
 			}
 		}
 		&__slider-pagination .swiper-pagination-bullet {
@@ -57,18 +75,26 @@
 			background: $mainGreenColor;
 		}
 		&__slide {
+			&-icon {
+				@include xl(padding, 5px);
+			}
 			&-picture {
-				position: relative;
 				&-prev, &-next {
 					position: absolute;
 					z-index: 10;
 					top: 15%;
+					@include xl(top, 20%);
 				}
 				&-prev {
 					left: -18px;
+					@include xl(left, -3px);
 				}
 				&-next {
 					right: -18px;
+					@include xl(right, -3px);
+				}
+				&-pic {
+					@include xl(width, 300px);
 				}
 			}
 			&-wrapper {

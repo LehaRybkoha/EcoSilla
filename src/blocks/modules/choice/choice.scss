@@ -1,0 +1,78 @@
+	.choice {
+		padding: 22px 0 20px 0;
+		background: linear-gradient(#16222a,#3a6073) no-repeat 0/50%,linear-gradient(#fdc830,#f37335) 100%/50%;
+		@include xl(padding, 60px 0);
+		&__title {
+			text-align: center;
+			margin-bottom: 85px;
+			@include xl(margin-bottom, 150px);
+			&-text {
+				font-family: $fontMont;
+				font-weight: bold;
+				font-size: rem(20px);
+				color: #fff;
+				margin-bottom: 22px;
+				@include xl(font-size, rem(36px));
+				@include xl(margin, 0 20px 0 0);
+				@include xl(display, flex);
+				@include xl(justify-content, center);
+				@include xl(align-items, flex-end);
+			}
+			&-pic {
+				&--lg {
+					display: none;
+					@include xl(display, inline-block);
+					@include xl(margin-left, 45px);
+				}
+				&--sm {
+					@include xl(display, none);
+				}
+			}
+		}
+		&-content {
+			&__list {
+				@include xl(display, flex);
+				@include xl(justify-content, space-around);
+			}
+			&__item {
+				position: relative;
+				background-color: #fff;
+				padding: 26px 26px 50px 26px;
+				border-radius: 10px;
+				width: 280px;
+				margin: 0 auto 70px auto;
+				@include xl(margin, 0);
+				&-count {
+					font-family: $fontRoboto;
+					font-weight: 500;
+					font-size: rem(20px);
+					color: #333333;
+					background: linear-gradient(127.45deg, #FDC830 -29.92%, #F37335 109.31%);
+					padding: 10px 16px;
+					border-radius: 100%;
+				}
+				&-title {
+					font-family: $fontMont;
+					font-weight: 600;
+					font-size: rem(18px);
+					color: #4F4F4F;
+					max-width: 213px;
+					margin: 22px 0;
+					@include xl(max-width, 240px);
+					@include xl(font-size, rem(20px));
+				}
+				&-desc {
+					font-family: $fontRoboto;
+					font-size: rem(15px);
+					color: #828282;
+					line-height: 24px;
+					@include xl(font-size, rem(16px));
+				}
+				&-pic {
+				    position: absolute;
+				    top: -90px;
+				    right: 0px;
+				}
+			}
+		}
+	}
