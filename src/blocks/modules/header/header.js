@@ -1,3 +1,4 @@
+import AOS from 'aos';
 import mmenu from 'mmenu-js';
 import $ from 'jquery';
 window.jQuery = $;
@@ -14,3 +15,5 @@ document.addEventListener(
 	    });
 	}
 );
+
+AOS.init();

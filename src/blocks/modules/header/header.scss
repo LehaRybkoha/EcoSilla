@@ -73,6 +73,11 @@
 		color: #BDBDBD;
 		@include md(font-size, rem(14px));
 		@include xl(font-size, rem(16px));
+		&:hover {
+			transition: all ease .2s;
+			color: #FDC830;
+			text-decoration-line: underline;
+		}
 	}
 	&__list {
 		@include lg(display, flex);

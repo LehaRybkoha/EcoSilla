@@ -3,6 +3,16 @@
 	background: linear-gradient(180deg, #000000 0%, rgba(28, 51, 77, 0.51151) 48.85%, rgba(31, 31, 34, 0) 100%), #010016;
 	&-content {
 		text-align: center;
+		@include lg(display, flex);
+		@include lg(justify-content, space-between);
+		@include lg(text-align, left);
+		&--sm {
+			@include lg(display, none);
+		}
+		&--lg {
+			display: none;
+			@include lg(display, flex);
+		}
 		&__nav {
 			&-item {
 				margin-bottom: 30px;
@@ -20,6 +30,9 @@
 
 		&__logo {
 			margin-bottom: 50px;
+			&-pic {
+				@include lg(min-width, 174px);
+			}
 		}
 
 		&__button {
@@ -33,9 +46,13 @@
 			margin-bottom: 30px;
 			text-transform: uppercase;
 			color: #731F0A;
+			max-width: 175px;
 		}
 
 		&__wares {
+			&__list {
+				@include lg(display, flex);
+			}
 			&-item {
 				margin-bottom: 30px;
 				&-link {
@@ -96,6 +113,93 @@
 				font-size: rem(12px);
 				color: #BDBDBD;
 				text-decoration-line: underline;
+			}
+		}
+		&__middle {
+			&-wrapper {
+				display: flex;
+				padding-top: 46px;
+				justify-content: space-between;
+			}
+			&-list {
+				display: flex;
+				padding-bottom: 46px;
+				border-bottom: 1px solid rgba(241, 241, 241, 0.15);
+			}
+			&-item {
+				margin-right: 24px;
+				&-link {
+					font-family: $fontRoboto;
+					font-size: rem(16px);
+					color: #BDBDBD;
+					&:hover {
+						transition: all ease .2s;
+						color: #FDC830;
+					}
+				}
+			}
+			&-access {
+				&-link {
+					font-family: $fontRoboto;
+					font-weight: 300;
+					font-size: rem(12px);
+					color: #BDBDBD;
+				}
+				&-text {
+					margin-bottom: 20px;
+				}
+				&-link {
+					background: none;
+					cursor: pointer;
+				}
+			}
+			&-floor {
+				&-text {
+					margin-bottom: 17px;
+				}
+				&-link {
+					font-family: $fontRoboto;
+					font-weight: 300;
+					font-size: rem(16px);
+					color: #BDBDBD;
+					&:hover {
+						transition: all ease .2s;
+						color: #FDC830;
+						text-decoration-line: underline;
+					}
+				}
+			}
+			&-facade {
+				&-text {
+					margin-bottom: 17px;
+				}
+				&-link {
+					font-family: $fontRoboto;
+					font-weight: 300;
+					font-size: rem(16px);
+					color: #BDBDBD;
+					&:hover {
+						transition: all ease .2s;
+						color: #FDC830;
+						text-decoration-line: underline;
+					}
+				}
+			}
+		}
+		&__right {
+			text-align: center;
+		}
+		&__number {
+			&-text {
+				margin-bottom: 15px;
+			}
+			&-link {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(16px);
+				text-decoration-line: underline;
+				margin-bottom: 35px;
+				color: #fff;
 			}
 		}
 	}
