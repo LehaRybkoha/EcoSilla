@@ -1,0 +1,102 @@
+.footer {
+	padding: 60px 0;
+	background: linear-gradient(180deg, #000000 0%, rgba(28, 51, 77, 0.51151) 48.85%, rgba(31, 31, 34, 0) 100%), #010016;
+	&-content {
+		text-align: center;
+		&__nav {
+			&-item {
+				margin-bottom: 30px;
+				&-link {
+					font-family: $fontRoboto;
+					font-size: rem(16px);
+					color: #8B8B8B;
+					&:hover {
+						transition: all ease .2s;
+						color: #FDC830;
+					}
+				}
+			}
+		}
+
+		&__logo {
+			margin-bottom: 50px;
+		}
+
+		&__button {
+			font-family: $fontRoboto;
+			font-weight: bold;
+			font-size: rem(14px);
+			height: 50px;
+			padding: 0 50px;
+			background: linear-gradient(158.88deg, #FDC830 -29.92%, #F37335 109.31%);
+			border-radius: 100px;
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			color: #731F0A;
+		}
+
+		&__wares {
+			&-item {
+				margin-bottom: 30px;
+				&-link {
+					font-family: $fontRoboto;
+					font-weight: 300;
+					font-size: rem(16px);
+					color: #828282;
+					&:hover {
+						transition: all ease .2s;
+						color: #FDC830;
+						text-decoration-line: underline;
+					}
+				}
+			}
+		}
+		&__number {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(16px);
+			text-decoration-line: underline;
+			margin-bottom: 35px;
+			color: #fff;
+			display: block;
+		}
+
+		&__location {
+			font-family: $fontMont;
+			font-size: rem(16px);
+			color: #E0E0E0;
+			line-height: 24px;
+			&--style {
+				font-size: rem(10px);
+				text-transform: uppercase;
+			}
+			&-icon {
+				color: $mainGreenColor;
+			}
+		}
+
+		&__icon {
+			margin-right: 15px;
+			&--style {
+				margin-right: 0;
+			}
+		}
+		&__icons {
+			margin: 50px 0;
+			display: flex;
+			justify-content: center;
+		}
+
+		&__access {
+			max-width: 150px;
+			margin: 0 auto 20px auto;
+			&-link {
+				font-family: $fontRoboto;
+				font-weight: 300;
+				font-size: rem(12px);
+				color: #BDBDBD;
+				text-decoration-line: underline;
+			}
+		}
+	}
+}
