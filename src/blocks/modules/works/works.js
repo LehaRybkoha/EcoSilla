@@ -12,8 +12,10 @@ var mySwiper10 = new Swiper ('.works-content__slider', {
 
 	$('.works-content__item-wrapper').mouseenter(function () {
 		$(this).find('.works-content__item-button-wrapper').show();
+		$(this).find('.works-content__slide-pic, .works-content__item-pic').css('filter', 'none');
 	})
 	$('.works-content__item-wrapper').mouseleave(function () {
 		$(this).find('.works-content__item-button-wrapper').hide();
+		$(this).find('.works-content__slide-pic, .works-content__item-pic').css('filter', 'grayscale(100%)');
 	})
 });

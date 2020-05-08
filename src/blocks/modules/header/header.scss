@@ -1,3 +1,7 @@
+
+
+
+
 .header {
 	@include lg(padding, 20px 0);
 	&-bg-wrapper {
@@ -81,6 +85,7 @@
 	}
 	&__list {
 		@include lg(display, flex);
+		@include lg(align-items, center);
 	}
 	&__item {
 		@include lg(margin-right, rem(10px));

@@ -50,6 +50,10 @@
 					transition: all .7s;
 					z-index: 5;
 					-webkit-transform: scale(1.1);
+					transform: scale(1.1);
+					.works-content__slide-pic {
+						filter: none !important;
+					}
 				}
 			}
 			&-pic {
@@ -100,6 +104,9 @@
 					-webkit-transform: scale(1.1);
 					.works-content__slide-button-wrapper {
 						opacity: 1;
+					}
+					.works-content__slide-pic {
+						filter: none!important;
 					}
 				}
 			}
