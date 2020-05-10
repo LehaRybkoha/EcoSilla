@@ -11,6 +11,8 @@
 		}
 	}
 	&-content {
+		@include xl(margin-top, 40px);
+		@include xl(border-radius, 10px);
 		position: relative;
 		&-products {
 			&--lg {
@@ -26,9 +28,17 @@
 			&__item {
 				@include xl(max-width, 300px);
 			}
+			&--hidden {
+				display: none;
+			}
 		}
 		&__buttons {
 			@include xl(display, flex);
+			@include xl(box-shadow, 0px 0px 30px rgba(129, 138, 148, 0.25));
+			@include xl(max-width, 822px);
+			@include xl(max-height, 43px);
+			@include xl(margin-bottom, 50px);
+			@include xl(margin, 0 auto);
 			@include xl(justify-content, center);
 			&-wrapper {
 			    margin-bottom: 25px;
@@ -55,7 +65,10 @@
 				width: 205px;
 				text-align: center;
 				cursor: pointer;
+				@include xl(box-shadow, none);
+				@include xl(border-radius, 0);
 				&:hover {
+					@include xl(border-radius, 10px);
 					background-color: $mainGreenColor;
 					color: #fff
 				}

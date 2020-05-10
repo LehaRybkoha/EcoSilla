@@ -1,5 +1,6 @@
 .facade {
 	position: relative;
+	@include xl(padding, 100px 0);
 	&::before {
 		@include xl(content, url(/img/sprites/intermediate-svg/imgThird.svg));
 	    position: absolute;

@@ -1,3 +1,4 @@
+import "%modules%/works-popup/works-popup"
 import "%modules%/header/header";
 import "%modules%/about/about";
 import "%modules%/advantages/advantages";
@@ -11,5 +12,5 @@ import "%modules%/choice/choice";
 import "%modules%/loop/loop";
 import "%modules%/works/works";
 import "%modules%/contact/contact";
-import "%modules%/footer/footer"
-import "%modules%/popup/popup"
+import "%modules%/footer/footer";
+import "%modules%/popup/popup";

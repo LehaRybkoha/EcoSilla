@@ -9,6 +9,7 @@ document.addEventListener(
 	    	"extensions": [
               "theme-dark"
            ],
+	       pageSelector: "#wrapper",
            onClick: {
            	  close: true,
            },
@@ -41,14 +42,14 @@ $(document).ready(function () {
     * 1000 скорость перехода в миллисекундах
     */
   });
-$( window ).resize(function() {
-  if ($(window).width() <= '990'){
-        $('section, header').removeAttr('data-aos');
-    } else {
-        $('section').attr('data-aos', 'fade-up');
-    }
-});
+// $( window ).resize(function() {
+//   if ($(window).width() <= '990'){
+//         $('section, header').removeAttr('data-aos');
+//     } else {
+//         $('section').attr('data-aos', 'fade-up');
+//     }
+// });
 
-// вызовем событие resize
-$(window).resize();
+// // вызовем событие resize
+// $(window).resize();
 });

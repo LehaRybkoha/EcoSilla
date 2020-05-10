@@ -1,4 +1,33 @@
 .about {
+	&__footer {
+		display: none;
+		justify-content: space-between;
+		margin: 0 auto;
+		@include sm(max-width, 510px);
+		@include xl(display, flex);
+	    @include md(max-width, 690px);
+	    @include lg(max-width, 930px);
+	    @include xl(max-width, 1250px);
+		&-text {
+			display: flex;
+			align-items: center;
+			font-family: $fontMont;
+			font-size: rem(16px);
+			color: #E7E7E7;
+			&-wrapper {
+				margin-right: 20px;
+			}
+			&--style {
+				font-size: rem(10px);
+				display: flex;
+				align-items: center;
+			}
+		}
+		&-pic {
+			width: 30px;
+			margin-right: 10px;
+		}
+	}
 	&-wrapper--sm {
 		@include lg(position, static);
 		@include lg(background-image, none);
@@ -27,7 +56,7 @@
 				text-align: center;
 				margin-bottom: 30px;
 				@include lg(text-align, left);
-				@include lg(max-width, 590px);
+				@include lg(max-width, 560px);
 				@include lg(font-size, rem(48px));
 				&--style {
 					color: #f37335;
@@ -40,9 +69,10 @@
 				font-size: rem(15px);
 				color: #fff;
 				text-align: center;
+				@include lg(font-size, rem(20px));
 				&--lg {
 					display: none;
-					padding-left: 20px;
+					padding-left: 30px;
 					font-size: rem(18px);
 					color: #BDBDBD;
 					font-style: italic;

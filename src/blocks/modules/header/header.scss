@@ -1,9 +1,5 @@
-
-
-
-
 .header {
-	@include lg(padding, 20px 0);
+	@include lg(padding, 22px 0);
 	&-bg-wrapper {
 		background-image: url(/img/aboutBgLg.jpg);
 		background-position: top;
@@ -66,6 +62,7 @@
 	&__logo {
 		&-pic {
 			@include lg(height, 35px);
+			@include xl(height, 43px);
 		}
 	}
 }
@@ -81,6 +78,10 @@
 			transition: all ease .2s;
 			color: #FDC830;
 			text-decoration-line: underline;
+		}
+		&--invisible {
+			display: none;
+			@include xl(display, inline);
 		}
 	}
 	&__list {
