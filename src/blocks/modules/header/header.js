@@ -2,6 +2,7 @@ import AOS from 'aos';
 import mmenu from 'mmenu-js';
 import $ from 'jquery';
 window.jQuery = $;
+AOS.init();
 
 document.addEventListener(
 	"DOMContentLoaded", () => {
@@ -21,7 +22,6 @@ document.addEventListener(
 	}
 );
 
-AOS.init();
 
 
 $(document).ready(function () {

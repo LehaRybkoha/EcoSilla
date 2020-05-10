@@ -21,14 +21,14 @@ $(document).ready(function () {
 	    },
 	});
 	var mySwiper12 = new Swiper ('.works-popup-terrace__slider-container2', {
+	    navigation: {
+	      nextEl: '.works-popup-terrace__slider-next2',
+	      prevEl: '.works-popup-terrace__slider-prev2',
+	    },
 	    speed: 400,
 	    loop: true,
 	    slidesPerView: 2,
 	    direction: 'vertical',
-	    navigation: {
-	      nextEl: '.works-popup-terrace-lg-slider-next2',
-	      prevEl: '.works-popup-terrace-lg-slider-prev2',
-	    },
 	});
 	var mySwiper13 = new Swiper ('.works-popup-facade-container', {
 	    navigation: {

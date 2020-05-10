@@ -58,6 +58,41 @@
 					padding: 30px 30px 30px 10px;
 				}
 			}
+			&-prev2, &-next2 {
+				@include lg(position, absolute);
+				@include lg(z-index, 50);
+			}
+			&-next2 {
+				top: 0;
+				left: 45%;
+			}
+			&-prev2 {
+				bottom: 0;
+				left: 45%;
+			}
+			&-icon {
+				@include lg(color, #333333);
+				@include lg(font-size, rem(12px));
+			}
+			&-circle {
+				@include lg(border, none);
+				&-prev {
+					@include lg(transform, rotate(-90deg));
+					@include lg(padding, 1px);
+					@include lg(background, #fff);
+					&:hover, &:active {
+						@include lg(background, $mainGreenColor)
+					}
+				}
+				&-next {
+					@include lg(transform, rotate(-90deg));
+					@include lg(padding, 1px);
+					@include lg(background, #fff);
+					&:hover, &:active {
+						@include lg(background, $mainGreenColor)
+					}
+				}
+			}
 			&-prev {
 		        top: -44px;
 			    left: 38.8%;
@@ -311,4 +346,20 @@
 
 .works-popup-fence--lg {
 	display: none;
+}
+
+.works-popup-facade-small-slide__pic {
+    width: 309px;
+    height: 245px;
+}
+
+.button.works-popup-terrace__slide-button {
+    background: none;
+    position: absolute;
+    top: 31%;
+    left: 37%;
+}
+
+.swiper-zoom-container {
+	position: relative;
 }
