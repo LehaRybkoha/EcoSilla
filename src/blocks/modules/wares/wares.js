@@ -159,6 +159,11 @@ $(document).ready(function () {
     }
   });
   $('.wares-open-btn').click(function () {
-      $('.wares-content-products__list').toggle();
+      $('.wares-content-products__list--hidden').toggle();
+      $(this).text('Скрыть');
+  });
+  $('.wares-open-btn').click(function () {
+      $('.wares-content-products__list--hidden').toggle();
+      $(this).text('Показать еще');
   });
 }); 

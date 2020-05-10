@@ -24,6 +24,12 @@
 		background-color: #fff;
 		@include lg(background-color, unset !important);
 		@include lg(padding-top, 0 !important);
+		&__slide {
+			&-pic {
+				width: 320px;
+				height: 245px;
+			}
+		}
 		&--lg {
 			display: none;
 		}
@@ -271,7 +277,7 @@
 
 .works-popup-terrace-lg-slider-prev, .works-popup-terrace-lg-slider-next, .works-popup-facade-lg-slider-prev, .works-popup-facade-lg-slider-next {
 	position: absolute;
-    bottom: 10%;
+    bottom: 0;
     top: unset;
     width: unset !important;
     cursor: pointer;

@@ -66,8 +66,10 @@
 				text-align: center;
 				cursor: pointer;
 				@include xl(box-shadow, none);
+				@include xl(font-size, rem(16px));
+				@include xl(width, 305px);
 				@include xl(border-radius, 0);
-				&:hover {
+				&:active {
 					@include xl(border-radius, 10px);
 					background-color: $mainGreenColor;
 					color: #fff
@@ -170,4 +172,16 @@
 			}
 		}
 	}
+}
+
+.wares-open-btn {
+	font-family: $fontRoboto;
+	font-weight: 400;
+	font-size: rem(16px);
+	background: none;
+	text-decoration: underline;
+	color: #333333;
+	text-align: center;
+	width: 100%;
+	padding-top: 30px;
 }
