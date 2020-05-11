@@ -83,4 +83,9 @@ $(document).ready(function () {
 	    },
 	  }
 	});
+	$( '.lightzoom' ).lightzoom( {
+	   speed:                 400,   // скорость появления
+	   isWindowClickClosing:  true, // true, если надо закрывать окно при клике по любой области
+	   isEscClosing:          true  // true, если надо закрывать окно при нажатии на кнопку Esc
+	 });
 });
