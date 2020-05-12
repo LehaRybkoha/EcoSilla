@@ -1,5 +1,5 @@
-import "%modules%/works-popup/works-popup"
 import "%modules%/header/header";
+import "%modules%/works-popup/works-popup"
 import "%modules%/about/about";
 import "%modules%/advantages/advantages";
 import "%modules%/use/use";
