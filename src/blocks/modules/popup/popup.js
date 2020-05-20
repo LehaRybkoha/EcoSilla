@@ -12,9 +12,10 @@ $(document).ready(function () {
     $('.personal, .popup-overlay').hide();
   })
   $('.open-policy').click(function () {
-    $('.policy, .popup-overlay').show()
+    $('.policy, .policy-overlay').show()
   })
   $('.close-policy').click(function () {
-    $('.policy, .popup-overlay').hide();
+    $('.policy, .policy-overlay').hide();
+    $('.popup-overlay').show()
   })
 });
